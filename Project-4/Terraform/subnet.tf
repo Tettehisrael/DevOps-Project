@@ -1,7 +1,7 @@
 # Create a private subnet in us-east-1a availability zone
 resource "aws_subnet" "private_us_east_1a" {
   vpc_id            = aws_vpc.main.id
-  cidr_block        = "10.0.0.0/16"
+  cidr_block        = "10.0.0.0/24"
   availability_zone = "us-east-1a"
 
   tags = {
@@ -12,7 +12,7 @@ resource "aws_subnet" "private_us_east_1a" {
 # Create a private subnet in us-east-1b availability zone
 resource "aws_subnet" "private_us_east_1b" {
   vpc_id            = aws_vpc.main.id
-  cidr_block        = "10.0.2.0/16"
+  cidr_block        = "10.0.2.0/24"
   availability_zone = "us-east-1b"
 
   tags = {
@@ -23,7 +23,7 @@ resource "aws_subnet" "private_us_east_1b" {
 # Create a public subnet in us-east-1a availability zone
 resource "aws_subnet" "public_us_east_1a" {
   vpc_id                  = aws_vpc.main.id
-  cidr_block              = "10.0.3.0/16"
+  cidr_block              = "10.0.3.0/24"
   availability_zone       = "us-east-1a"
   map_public_ip_on_launch = true
 
@@ -35,7 +35,7 @@ resource "aws_subnet" "public_us_east_1a" {
 # Create a public subnet in us-east-1b availability zone
 resource "aws_subnet" "public_us_east_1b" {
   vpc_id                  = aws_vpc.main.id
-  cidr_block              = "10.0.4.0/16"
+  cidr_block              = "10.0.4.0/24"
   availability_zone       = "us-east-1b"
   map_public_ip_on_launch = true
 
