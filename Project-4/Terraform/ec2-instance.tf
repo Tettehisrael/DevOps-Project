@@ -22,7 +22,7 @@ resource "aws_instance" "my_server" {
   instance_type = "t3.micro"
 
   # create devops key pair manually before you run terraform
-  key_name = "devops"
+  key_name = "Devops"
 
   subnet_id              = aws_subnet.public_us_east_1a.id
   vpc_security_group_ids = [aws_security_group.my_server_ssh_access.id]
